@@ -1,0 +1,22 @@
+name: mcp-shopify
+version: 0.1.0
+description: MCP server for Shopify Admin API
+runtime: node
+configSchema:
+  type: object
+  required:
+    - shopifyStoreUrl
+    - shopifyAccessToken
+  properties:
+    shopifyStoreUrl:
+      type: string
+      title: Shopify Store URL
+      description: Your Shopify store URL (e.g., https://yourstore.myshopify.com)
+    shopifyAccessToken:
+      type: string
+      title: Shopify Access Token
+      description: Shopify Admin API access token
+      secret: true
+envMap:
+  shopifyStoreUrl: SHOPIFY_STORE_URL
+  shopifyAccessToken: SHOPIFY_ACCESS_TOKEN
